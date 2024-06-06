@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link real="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/nmp/toastify-js/src/toastify.main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>Dev pizza - a melhor pizzaria dev</title>
+</head>
+<body>
+    
+    
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img
+            src="./assets/1.jpg"
+            alt="Logo FullPizzaStack"
+            class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+            />
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
+                DEV PIZZARIA
+            </h1>
+
+            <span class="text-white font-medium">Rua Dev 260, SÃO PAULO - SP</span>
+
+            <div class="bg-emerald-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Seg á Dom - 18:00 as 23:00</span>
+            </div>
+
+        </div>
+    </header>
+    
+  
+    <h1 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+      Conheça nosso menu
+    </h1>
+
+    <h6 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        PIZZAS SALGADAS
+    </h6>
+
+    
+    <div id="menu">
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            
+            
+            <div class="flex gap-2">
+                <img
+                src="./assets/th.jpg"
+                alt="PIZZA DE CAMARÃO"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                  <p class="font-bold">PIZZA DE CAMARÃO</p>  
+                  <p class="text-sm">Para muitos não pode faltar! É feita com molho de tomate, muçarela, camarão, queijo parmesão e manjericão.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$ 59.99</p>
+                    <button 
+                    class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                    data-name="PIZZA DE CAMARÃO"
+                    data-price="59.99"
+                    > 
+                      <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+
+            </div>
+            
+            <div class="flex gap-2">
+                <img
+                src="./assets/th (1).jpg"
+                alt="PIZZA DE CALABREZA"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                  <p class="font-bold">PIZZA DE CALABREZA</p>  
+                  <p class="text-sm">O recheio é preparado com queijo, molho de tomate, calabresa em rodelas, cebola, tomate picado, azeite e orégano.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$ 44.99</p>
+                    <button 
+                    class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                    data-name="PIZZA DE CALABREZA"
+                    data-price="44.99"
+                    > 
+                      <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+
+            </div>
+            
+            <div class="flex gap-2">
+                    <img
+                    src="./assets/th (2).jpg"
+                    alt="PIZZA PORTUGUESA"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                    />
+    
+                    <div>
+                      <p class="font-bold">PIZZA PORTUGUESA</p>  
+                      <p class="text-sm">É feita com queijo, azeitona verde ou preta, ovo cozido, presunto cozido, cebola, ervilha, molho de tomate e azeite.</p>
+                    </div>
+    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold">R$ 49.99</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="PIZZA PORTUGUESA"
+                        data-price="49.99"
+                        > 
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+    
+                </div>
+            
+                <div class="flex gap-2">
+                    <img
+                    src="./assets/th (3).jpg"
+                    alt="PIZZA DE MUÇARELA"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                    />
+    
+                    <div>
+                      <p class="font-bold">PIZZA DE MUÇARELA</p>  
+                      <p class="text-sm">Esse sabor leva nada mais nada menos que o queijo muçarela em abundância, molho de tomate fresco, azeitona, rodelas de tomate e orégano!</p>
+                    </div>
+    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold">R$ 44.99</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="PIZZA DE MUÇARELA"
+                        data-price="44.99"
+                        > 
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+    
+                </div>
+            
+                <div class="flex gap-2">
+                    <img
+                    src="./assets/th (4).jpg"
+                    alt="PIZZA DE MARGUERITA"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                    />
+    
+                    <div>
+                      <p class="font-bold">PIZZA DE MARGUERITA</p>  
+                      <p class="text-sm">É preparada com molho de tomate, manjericão, rodelas de tomate fresco, azeitona, queijo muçarela e orégano salpicado.</p>
+                    </div>
+    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold">R$ 49.99</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="PIZZA DE MARGUERITA"
+                        data-price="49.99"
+                        > 
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+    
+                </div>
+            
+                <div class="flex gap-2">
+                    <img
+                    src="./assets/th (5).jpg"
+                    alt="PIZZA DE PÃO DE ALHO"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                    />
+    
+                    <div>
+                      <p class="font-bold">PIZZA DE PÃO DE ALHO</p>  
+                      <p class="text-sm">Como o próprio nome já diz, a pizza é formada por alho, requeijão, queijo e salsinha. Deve ser uma delícia, né?</p>
+                    </div>
+    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold">R$ 59.99</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="PIZZA DE PÃO DE ALHO"
+                        data-price="59.99"
+                        > 
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+    
+                </div>
+            
+        </main>
+
+       
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+               PIZZAS DOCES 
+            </h2>
+        </div>
+
+       
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+       
+           <div class="flex gap-2">
+            <img
+            src="./assets/th (6).jpg"
+            alt="PIZZA DE BRIGADEIRO"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+
+            <div>
+              <p class="font-bold">PIZZA DE BRIGADEIRO</p>  
+              <p class="text-sm">Um clássico de origem brasileira, o brigadeiro é uma das pizzas mais pedidas e populares. Nem preciso dizer sobre a sua preparação, né?</p>
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$ 59.99</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="PIZZA DE BRIGADEIRO"
+                data-price="59.99"
+                > 
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+
+        </div>
+       
+        <div class="flex gap-2">
+            <img
+            src="./assets/th (7).jpg"
+            alt="PIZZA ROMEU E JULIETA"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+
+            <div>
+              <p class="font-bold">PIZZA ROMEU E JULIETA</p>  
+              <p class="text-sm">Essa pizza é feita com a combinação do queijo e da goiabada. Existem várias versões dependendo do queijo escolhido, que pode ser brie, ricota, muçarela, entre outros!</p>
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$ 64.99</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="PIZZA ROMEU E JULIETA"
+                data-price="64.99"
+                > 
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+
+        </div>
+       
+        <div class="flex gap-2">
+            <img
+            src="./assets/th (8).jpg"
+            alt="PIZZA BANANA NEVADA"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+
+            <div>
+              <p class="font-bold">PIZZA BANANA NEVADA</p>  
+              <p class="text-sm">O recheio é feito com bananas em rodelas, chocolate branco, açúcar e canela. É uma delícia e fica super apresentável!</p>
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$ 64.99</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="PIZZA BANANA NEVADA"
+                data-price="64.99"
+                > 
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+
+        </div>
+       
+        <div class="flex gap-2">
+            <img
+            src="./assets/th (9).jpg"
+            alt="PIZZA PRESTIGIO"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+
+            <div>
+              <p class="font-bold">PIZZA PRESTIGIO</p>  
+              <p class="text-sm">O recheio é feito com uma leve camada de muçarela, chocolate ao leite e coco ralado. Também pode ser acrescentado frutas como morango e cereja.</p>
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$ 69.99</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="PIZZA PRESTIGIO"
+                data-price="69.99"
+                > 
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+
+        </div>
+       
+        </div>
+       
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="front-bold text-3xl">
+              BEBIDAS
+            </h2>
+        </div>
+
+       
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+       
+       
+        <div class="flex gap-2">
+            <img
+            src="./assets/RG 1.jpg"
+            alt="COCA-COLA 2L"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+
+            <div class="w-full">
+              <p class="font-bold">COCA-COLA 2L</p>  
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$ 16.00</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="COCA-COLA 2L"
+                data-price="16.00"
+                > 
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+
+        </div>
+       
+        <div class="flex gap-2">
+            <img
+            src="./assets/RG 2.jpg"
+            alt="OUTRAS REFRIGERANTES 2L"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+
+            <div class="w-full">
+              <p class="font-bold">OUTRAS REFRIGERANTES 2L</p>  
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$ 12.00</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="OUTRAS REFRIGERANTES 2L"
+                data-price="12.00"
+                > 
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+
+        </div>
+       
+        <div class="flex gap-2">
+            <img
+            src="./assets/CX 1.jpg"
+            alt="SUCOS DEL VALLE"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+
+            <div class="w-full">
+              <p class="font-bold">SUCOS DEL VALLE</p>  
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$ 12.00</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="SUCOS DEL VALLE"
+                data-price="12.00"
+                > 
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+
+        </div>
+       
+        <div class="flex gap-2">
+            <img
+            src="./assets/LT.jpg"
+            alt="REFRIGERANTES LATA 350ML"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+
+            <div class="w-full">
+              <p class="font-bold">REFRIGERANTES LATA 350ML</p>  
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$ 7.00</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="REFRIGERANTES LATA 350ML"
+                data-price="7.00"
+                > 
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+
+        </div>
+       
+        </div>
+       
+
+    </div>
+    
+    <div 
+      class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+      id="cart-modal"
+    >
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+          <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+           <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+           <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+           <p class="font-bold mt-4">Endereço de entrega:</p>
+           <input
+           type="text"
+           placeholder="Digite seu endereço completo..."
+           id="address"
+           class="w-full border-2 p-1 rounded my-1"
+           />
+           <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+
+           <div class="flex items-center justify-between mt-5 w-full">
+            <button id="close-modal-bnt" class="bg-rose-700 text-white px-4 py-1 rounded">Fechar</button>
+            <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+           </div>
+
+
+        </div>
+    </div>
+    
+
+   
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center"> 
+        <button 
+           class="flex items-center gap-2 text-white font-bold"
+           id="cart-btn"
+        >
+            (<span id="cart-count">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+   
+    
+    
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
